@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "153356599977",
+    "firebase_url": "https://challenge-c3691.firebaseio.com",
+    "project_id": "challenge-c3691",
+    "storage_bucket": "challenge-c3691.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153356599977:android:1ad6e1e71405c151",
+        "android_client_info": {
+          "package_name": "org.nativescript.challenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153356599977-ncsscun9v5kh2m8dkktd8gpmitejil1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAARnRd10Q2nWeyScdIYRVjeOulfzt6IWM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

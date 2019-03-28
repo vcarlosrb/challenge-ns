@@ -1,0 +1,12 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Creación de Cliente"></Label>
+</ActionBar>
+
+<StackLayout class="page" style="padding: 20">
+    <TextField hint="Nombre" id="firstNameTextField"></TextField>
+    <TextField hint="Apellido" id="lastNameTextField"></TextField>
+    <TextField hint="Edad" keyboardType="number" maxLength="3" id="ageTextField"></TextField>
+    <Label text="Fecha de Nacimiento" style="padding-top: 30"></Label>
+    <DatePicker id="datePicker"></DatePicker>
+    <Button text="Guardar Datos" (tap)="addToMyBucket()"></Button>
+</StackLayout>
