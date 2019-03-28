@@ -3,6 +3,7 @@ import * as firebase from 'nativescript-plugin-firebase';
 import { RouterExtensions } from "nativescript-angular/router";
 import * as appSettings from 'tns-core-modules/application-settings';
 import { LoadingIndicator } from 'nativescript-loading-indicator';
+import * as application from "tns-core-modules/application";
 
 @Component({
     selector: "Home",
@@ -23,9 +24,11 @@ export class HomeComponent implements OnInit {
     }
 
     fbLogin() {
-        this.loader.show({
-            message: 'Cargando...'
-        });
+        if(application.android) {
+            this.loader.show({
+                message: 'Cargando...'
+            });
+        }
         firebase.login({
             type: firebase.LoginType.FACEBOOK,
             facebookOptions: {
@@ -35,7 +38,9 @@ export class HomeComponent implements OnInit {
             let data = JSON.stringify(result.additionalUserInfo.profile);
             console.log("[*] Facebook Auth Success: " + data);
             appSettings.setString('userInfo', String(data));
-            this.loader.hide();
+            if(application.android) {
+                this.loader.hide();
+            }
             this.routerExtensions.navigate(["/form"], { clearHistory: true });
         },(errorMessage) => {
             console.log("[*] Facebook Auth Error: " + errorMessage);

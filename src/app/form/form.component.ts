@@ -46,7 +46,7 @@ export class FormComponent implements OnInit {
             first_name: this._firstNameTextField.text,
             last_name: this._lastNameTextField.text,
             age: this._ageTextField.text,
-            birthdate: this._datePicker.date,
+            birthdate: String(this._datePicker.date)
         }).then((result) => {
             console.log("[*] Info : Your data was pushed !");
             this.loader.hide();
